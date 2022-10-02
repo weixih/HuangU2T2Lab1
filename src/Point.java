@@ -37,4 +37,33 @@ public class Point {
     public String coordinate(){
         return "(" + x +", " + y + ")";
     }
+
+    public String quadrant(){
+        String quadrant = "";
+        if (x >0 && y >0){
+            quadrant = "I";
+        }
+        if (x<0 && y >0){
+            quadrant =  "II";
+        }
+        if (x<0 && y<0){
+            quadrant =  "III";
+        }
+        if (x>0 && y<0){
+            quadrant =  "IV";
+        }
+        if (x==0 && y==0){
+            quadrant = "Origin";
+        }
+        else {
+            if (x == 0) {
+                quadrant = "On the y-axis";
+            }
+            if (y == 0) {
+                quadrant = "On the x-axis";
+            }
+        }
+        return quadrant;
+
+    }
 }
